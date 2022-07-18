@@ -31,3 +31,18 @@ int main()
 	printf("%d", count);
 	return 0;
 }
+-------------方法3------------------
+
+int main()
+{
+	int num = 0;
+	int count = 0;
+	scanf("%d", &num);
+	while (num)
+	{
+		count++;
+		num = num&(num-1);
+	}
+	printf("%d", count);
+	return 0;
+}
