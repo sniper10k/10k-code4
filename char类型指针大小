@@ -1,0 +1,12 @@
+# 10k-code4
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+
+int main()
+{
+	int a = 0x11223344;	//内存中存放是 44 33 22 11;
+	char* pc = (char*)&a;	//当pc是char*类型是,*pc只能操作一个字节
+	*pc = 0;
+	printf("%x ", a);	//%x是以十六进制的形式输出;
+	return 0;
+}
