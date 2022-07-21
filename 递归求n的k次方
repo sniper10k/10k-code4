@@ -1,0 +1,22 @@
+# 10k-code4
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+
+double my_nk(int n, int k)
+{
+	if (k < 0)
+		return (1.0 / my_nk(n, -k));	//当k为负数时,次方为分数,-k继续带入到最下面的return中求分母大小
+	else if (k == 0)
+		return 1;
+	else
+		return my_nk(n, k - 1) * n;
+}
+int main()
+{
+	int n = 0;
+	int k = 0;
+	scanf("%d%d", &n, &k);
+	double sum = my_nk(n, k);
+	printf("%lf\n", sum);
+	return 0;
+}
